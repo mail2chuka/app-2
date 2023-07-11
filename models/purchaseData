@@ -4,6 +4,7 @@ const purchaseData = {
   quantity: '',
   purchaseAmount: '',
   amountPaid: '',
+  date: '',
   timeStamp: true,
 };
 
