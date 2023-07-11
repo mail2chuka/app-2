@@ -1,0 +1,13 @@
+const purchaseData = {
+  clientName: { type: String, required: true },
+  product: { type: String },
+  quantity: '',
+  purchaseAmount: '',
+  amountPaid: '',
+  timeStamp: true,
+};
+
+/* add all purchaseAmount, add all amountPaid 
+on each purchase or update payment operation 
+{totalAmountPaid-totalPurchase amount= Account Balance to be 
+found in userData} */
