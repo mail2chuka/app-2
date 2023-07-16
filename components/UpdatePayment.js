@@ -1,13 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const UpdatePayment = () => {
+  const [amount, setAmount] = useState('');
+  const [formatted, setFormatted] = useState('');
+  const update = (event) => {
+    setAmount(
+      isNaN(event.target.value)
+        ? ''
+        : Number(event.target.value.replace(/,/g, ''))
+    );
+  };
+
+  const submit = () => {
+    if (!formatted) {
+      return;
+    } else {
+    }
+  };
+
   return (
     <div>
-      <form>
-        <label>Amount Paid: </label>
-        <input name="amount" placeholder="Enter Amount Paid"></input>
-        <button>Update</button>
-      </form>
+      <label>Amount Paid: </label>
+      <input
+        name="amount"
+        placeholder="Enter Amount Paid"
+        onChange={update}
+      ></input>
+      <button onClick={submit}>Update </button>
+      <div>N {amount.toLocaleString('en-US')}</div>
     </div>
   );
 };

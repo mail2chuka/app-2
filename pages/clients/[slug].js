@@ -11,11 +11,14 @@ export default function userPage(props) {
   return (
     <div>
       <div className="container m-auto grid grid-cols-2">
-        <div>Client Name</div> <div>{user.name}</div>
+        <div>Client Name: {user.name}</div>
+        <div>
+          Account Balance is : N{user.accountBalance.toLocaleString('en-US')}
+        </div>
       </div>
       <div className="container m-auto grid grid-cols-2">
         {' '}
-        update payment due date: <UpdateDate user={user} />
+        <UpdateDate user={user} />
       </div>
       <div>
         Due Date is : {user.paymentDueDate} or{' '}
