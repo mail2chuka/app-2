@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
-export default function UserCard({ users, key }) {
+export default function UserCard({ users }) {
   return (
     <div className="text-2xl shadow-lg w-full flex flex-col justify-center items-center">
       <Link href={`/clients/${users.slug}`}>{users.name.toUpperCase()}</Link>
