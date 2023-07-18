@@ -4,6 +4,7 @@ import User from "@/models/User";
 import GetReport from "@/components/GetReport";
 import UpdateDate from "@/components/UpdateDate";
 import UpdatePayment from "@/components/UpdatePayment";
+import PlaceOrder from "@/components/PlaceOrder";
 
 export default function userPage(props) {
   // console.log(props);

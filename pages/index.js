@@ -19,19 +19,19 @@ export default function Home({ user }) {
   const router = useRouter();
   const redirect = () => router.push("/regform");
   return (
-    <div className={`mx-10 my-10 `}>
-      <button
-        onClick={redirect}
-        className="p-3 text-xl rounded-full bg-slate-400"
-      >
+    <div className="grid grid-cols-1 mt-10 max-w-fit justify-center min-w-fit w-screen px-3 mx-3 md:mx-32">
+      <div className="m-2 w-40">
         {" "}
-        Register New Client
-      </button>
-      <div className="grid place-content-center ">
-        {" "}
-        <SearchBar />
-        <DisplayClients user={user}></DisplayClients>
+        <button
+          onClick={redirect}
+          className=" p-2 text-xl w-40 rounded-2xl bg-purple-400"
+        >
+          {" "}
+          Register New Customer
+        </button>
       </div>
+      <SearchBar />
+      <DisplayClients user={user}></DisplayClients>
     </div>
   );
 }
