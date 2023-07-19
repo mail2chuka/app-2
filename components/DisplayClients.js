@@ -9,7 +9,7 @@ function DisplayClients() {
     return a.name.localeCompare(b.name);
   });
   return (
-    <div className="flex mt-10 justify-center items-center w-4/5">
+    <div className="grid grid-cols-1 mt-10 justify-center items-center w-4/5">
       {/* <Link href="/update">update date</Link> */}
       <ul>
         {" "}
