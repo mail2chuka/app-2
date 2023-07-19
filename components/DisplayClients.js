@@ -11,11 +11,14 @@ function DisplayClients() {
   return (
     <div className="flex mt-10 justify-center items-center w-4/5">
       {/* <Link href="/update">update date</Link> */}
-      {sortfilteredUser.length === 0 ? (
-        <div className="flex text-lg text-red-500 font-bold">Not found</div>
-      ) : (
-        filteredUser.map((users) => <UserCard users={users} key={[]._id} />)
-      )}
+      <ul>
+        {" "}
+        {sortfilteredUser.length === 0 ? (
+          <li className="flex-1 text-lg text-red-500 font-bold">Not found</li>
+        ) : (
+          filteredUser.map((users) => <UserCard users={users} key={[]._id} />)
+        )}
+      </ul>
     </div>
   );
 }
